@@ -3,6 +3,8 @@
 > Connect to DApps using someone else's wallet through bookmarklets!<br>
 > https://kykungz.github.io/crypt-wallet-changer
 
+<br>
+
 <p align="center">
   <img src="./resources/use-bookmarklet.gif" style="width: 500px">
 </p>
