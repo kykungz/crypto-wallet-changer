@@ -1,6 +1,6 @@
 # Crypto Wallet Changer
 
-> Connect to DApps using someone else's wallet through bookmarklets!
+> Connect to DApps using someone else's wallet through bookmarklets!<br>
 > https://kykungz.github.io/crypt-wallet-changer
 
 <p align="center">
