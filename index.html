@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Wallet Changer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&family=Secular+One&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Hind Madurai', sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-family: 'Secular One', sans-serif;
+      font-size: 42px;
+    }
+
+    h2 {
+      color: rgb(70, 70, 70);
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .header {
+      background: rgb(255, 200, 47);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 1rem;
+      max-width: 900px;
+      width: 100%;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .bookmarklet {
+      box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      min-width: 150px;
+      min-height: 100px;
+      padding: 1rem;
+      transition: all 300ms;
+      text-align: center;
+    }
+
+    .bookmarklet:hover {
+      transform: scale(1.05);
+    }
+
+    .bookmarklet>img {
+      display: block;
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin: 0 auto 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Crypto Wallet Changer</h1>
+    <h2>Connect to DApps using someone else's wallet through bookmarklets!</h2>
+  </div>
+  <div class="container">
+    
+            <a href="javascript:(function%20()%20%7B%0A%20%20%20%20const%20address%20%3D%20prompt(%22Change%20account%20to%3A%22)%3B%0A%20%20%20%20if%20(address)%20%7B%0A%20%20%20%20%20%20ethereum.emit(%22accountsChanged%22%2C%20%5Baddress%5D)%3B%0A%20%20%20%20%7D%0A%20%20%7D)()"
+              class="bookmarklet">
+              <img src="https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg" alt="MetaMask">
+              <h3>MetaMask</h3>
+            </a>
+        
+            <a href="javascript:(function%20()%20%7B%0A%20%20%20%20const%20address%20%3D%20prompt(%22Change%20account%20to%3A%22)%3B%0A%20%20%20%20if%20(address)%20%7B%0A%20%20%20%20%20%20ronin.provider.sendAsync%20%3D%20(data%2C%20callback)%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20if%20(data.method%20%3D%3D%3D%20%22eth_accounts%22)%20%7B%0A%20%20%20%20%20%20%20%20%20%20callback(undefined%2C%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20...data%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20result%3A%20%5Baddress.replace(%2Fronin%3A%2F%2C%20%220x%22)%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20ronin.provider.sendAsync(data%2C%20callback)%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%3B%0A%20%20%20%20%20%20ronin.roninEvent.dispatchEvent(new%20Event(%22account_changed%22))%3B%0A%20%20%20%20%7D%0A%20%20%7D)()"
+              class="bookmarklet">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAAEcCAMAAACxq9scAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACoFBMVEUAAAASbdsHb+USc+gSc+gPcuoRdOkRc+kScecTceoScuoRc+kRb+kTcukScuoOceMSdOkScuoGcOYSc+oMdOgSc+oNceoScukRc+kTc+kRZt0McOkRaOgTc+YTcukTcOoAYtgRcukScukScegSceoScuoPcekSc+oScOoSc+oTcegRb+YAbdsScuoScekScuoSc+oOc+gScukScuoNc+kAAAAAcOASc+oOcuYScukAauoSc+oRcOkAb+kScuoAQL8Sc+kTcOsQcucScukScukSc+oScuoRc+kTcuoNcuoScOgSc+oHcuQRc+kSc+sPceoAYN8TcukSc+kTcugAAIAScukSc+oQcN8ScuoRdOkTdOoRc+kMcOkScukSc+oSc+kTceoPdekRceYScekAbecAc+YScuoMcucPb+oTc+oLcugAZuYSc+oOcegKcuUNcekScuoGbecOcukTcukAXegPbOgPdOoScuoAauoQcOoScuoPcuoRdOoIcekOc+kScukSc+kScukScuoPbekScukAbOIKc+YScOoLcukSc+oScuoScukScugScuoNcukJcecRc+oScukHceoAVaoSc+oScegRcukPc+oScukNc+kRdOoSc+oOcOcQcegAZswSbeQSceoQc+gScukRc+kQc+kScukKb+cNdegRcegScuUAceMTcukRdOkRcukScekScugSc+kPcukRc+kScuoScOkNcuoNceoMcukAceMAVdUTc+cScugNcugNcegScukQa+YSc+oTc+gTcukNa+QMcesSc+kScOoTcekScukSdekScugQcOcScukJb+gRc+kSc+kOc+oOcugMcOcRdOkObukPcukRc+kScekTcuoPaeEKcOYOc+gTcuoOcekSc+r///9p+cv8AAAA3nRSTlMADidkns3n9ytsuvQuo+gSgO8pwULaX+3s3A9/LCjqaw258WOcy9uon9iHHgfZc4/wb1P8jAEZ+3DUDP07F7UEoJaSrMXl39XAm2LuJvlmvwj4R3sCpqcQ+oqVz1L2zK2zdj3HFRTmQYWyQwqDWDFR4ipe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" alt="Ronin Wallet">
+              <h3>Ronin Wallet</h3>
+            </a>
+        
+  </div>
+  <a href="https://github.com/kykungz/crypto-wallet-changer" class="github-corner" target="_blank" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+</body>
+
+</html>
