@@ -17,18 +17,6 @@ You can't really do that because crypto wallet like [MetaMask](https://metamask.
 
 This bookmarklet aims to help you perform a "view-as"-like functionality, by injecting scripts that tells the DApps to read your wallet address that you filled in.
 
-## How this works?
-
-Most crypto wallet extensions injects a variable into browser's global variable `window`.
-
-For example, [MetaMask](https://metamask.io/) injects a variable named `ethereum` into browser's `window`, so you could use `window.ethereum` to perform operations on the wallet extension.
-
-DApps sites like [PancakeSwap](https://pancakeswap.finance/) retrieve wallet information from that `window.ethereum` variable when you connects to their website. These DApps are also listening on events that are sent from the extension, important events such as "Account Connected" or "Account Changed".
-
-This bookmarklet just simply try to emit those events and tricks the website to think that you have changed your wallet to the one you filled it.
-
-For example, emitting `account changed to <user_input>` event.
-
 ## Installation
 
 Easy, as this project works as a [Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet), you can simply visit https://kykungz.github.io/crypto-wallet-changer and drag a wallet into your Bookmarks bar of your browser.
@@ -47,6 +35,17 @@ A prompt will be shown, then you can paste any wallet address you want it to be 
 
 Note that this only tricks the webpage to think that you have changed your wallet to the one you filled in. You can't really sign transactions using this method since you don't have the private key.
 
+## How this works?
+
+Most crypto wallet extensions injects a variable into browser's global variable `window`.
+
+For example, [MetaMask](https://metamask.io/) injects a variable named `ethereum` into browser's `window`, so you could use `window.ethereum` to perform operations on the wallet extension.
+
+DApps sites like [PancakeSwap](https://pancakeswap.finance/) retrieve wallet information from that `window.ethereum` variable when you connects to their website. These DApps are also listening on events that are sent from the extension, important events such as "Account Connected" or "Account Changed".
+
+This bookmarklet just simply try to emit those events and tricks the website to think that you have changed your wallet to the one you filled it.
+
+For example, emitting `account changed to <user_input>` event.
 ## Contribute
 Feel free to contribute to this repository!
 
