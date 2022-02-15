@@ -17,9 +17,13 @@ You can't really do that because crypto wallet like [MetaMask](https://metamask.
 
 This bookmarklet aims to help you perform a "view-as"-like functionality, by injecting scripts that tells the DApps to read your wallet address that you filled in.
 
+## Supported wallets
+- [MetaMask](https://metamask.io/)
+- [Ronin Wallet](https://wallet.roninchain.com/)
+- [Terra Station](https://chrome.google.com/webstore/detail/terra-station-wallet/aiifbnbfobpmeekipheeijimdpnlpgpp)
 ## Installation
 
-Easy, as this project works as a [Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet), you can simply visit https://kykungz.github.io/crypto-wallet-changer and drag a wallet into your Bookmarks bar of your browser.
+Easy, this project works as a [Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet), so you can simply visit https://kykungz.github.io/crypto-wallet-changer and drag a wallet into your Bookmarks bar of your browser.
 
 <p align="center">
   <img src="./resources/add-bookmarklet.gif" style="width: 400px">
